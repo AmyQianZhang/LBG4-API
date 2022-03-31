@@ -1,9 +1,9 @@
-# Title
-Amy
-## Section 1
-is
-## Sectin 2
-brilliant
+# Where is Brett
+In meetings and doing reports and presentations
+## How is Brett
+Bored hahaha
+## What does Amy say
+Brett is brilliant
 ~~~ bash
-$ echo "Amy is brilliant"
+$ echo "Brett is brilliant"
 
