@@ -13,7 +13,7 @@ npm i
 
 npm test
 
-docker build -t ${image} .
+docker build -t $image .
 docker image prune -f
 
 docker run -d -p 5000:5000 --name $container $image
