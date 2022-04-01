@@ -9,8 +9,6 @@ then
 	docker rm -f ${container}
 fi
 
-cd ~/LBG4-API
-
 npm i
 
 npm test
