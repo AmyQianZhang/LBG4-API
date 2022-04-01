@@ -4,6 +4,7 @@ image=my-image
 container=my-container
 status=$(docker ps -a | grep ${container})
 
+echo "$status"
 if [ "$status"==true ]
 then
 	docker rm -f ${container}
