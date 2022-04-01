@@ -2,10 +2,8 @@
 
 image=my-image
 container=my-container
-status=$(docker ps -a | grep ${container})
 
-echo "$status"
-if [ "$status"==true ]
+if docker ps -a | grep ${container} > /dev/null
 then
 	docker rm -f ${container}
 fi
