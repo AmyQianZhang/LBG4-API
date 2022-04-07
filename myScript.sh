@@ -21,7 +21,7 @@ docker tag ${image} gcr.io/lbg-210322/${image}
 
 sudo su - jenkins
 
-gcloud auth list
+gcloud auth activiate-service-account --key-file=${service}
 
 gcloud config set account amy-jenkins@lbg-210322.iam.gserviceaccount.com
 
