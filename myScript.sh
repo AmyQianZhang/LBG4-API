@@ -12,11 +12,11 @@ npm i
 
 npm test
 
-docker build -t gcr.io/lbg-210322/${image}:${BUILD_ID} .
+docker build -t gcr.io/lbg-210322/${image}:v${BUILD_ID} .
 
 docker image prune -f
 
-docker push gcr.io/lbg-210322/${image}:${BUILD_ID}
+docker push gcr.io/lbg-210322/${image}:v${BUILD_ID}
 
 
 
