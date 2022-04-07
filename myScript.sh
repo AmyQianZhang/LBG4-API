@@ -17,4 +17,6 @@ docker image prune -f
 
 #docker run -d -p 5000:5000 --name ${container} ${image}
 
+gcloud auth activate-service-account --key-file ${SERVICE}
+
 docker push gcr.io/lbg-210322/${image}
