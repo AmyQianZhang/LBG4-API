@@ -19,7 +19,9 @@ docker image prune -f
 
 docker tag ${image} gcr.io/lbg-210322/${image}
 
-gcloud auth activate-service-account
+sudo su - jenkins
+
+gcloud auth list
 
 gcloud config set account amy-jenkins@lbg-210322.iam.gserviceaccount.com
 
