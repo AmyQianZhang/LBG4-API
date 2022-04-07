@@ -18,4 +18,9 @@ docker image prune -f
 #docker run -d -p 5000:5000 --name ${container} ${image}
 
 docker tag ${image} gcr.io/lbg-210322/${image}
+
+gcloud auth activate-service-account --key-file lbg-210322-86572edd585c.json
+
+gcloud config set account amy-jenkins@lbg-210322.iam.gserviceaccount.com
+
 docker push gcr.io/lbg-210322/${image}
