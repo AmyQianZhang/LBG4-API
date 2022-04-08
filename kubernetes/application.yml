@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: amy-app
-        image: gcr.io/lbg-210322/amy-image:v{{VERSION}}
+#        image: gcr.io/lbg-210322/amy-image:v{{VERSION}}
+        image: gcr.io/lbg-210322/amy-image:latest
         ports:
         - containerPort: 5000
