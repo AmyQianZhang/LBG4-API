@@ -20,4 +20,4 @@ spec:
         image: gcr.io/lbg-210322/amy-image:latest
         ports:
         - containerPort: 5000
-      imagePullPolicy: Always
+        imagePullPolicy: Always
