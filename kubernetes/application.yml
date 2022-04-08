@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amy-app
+  labels:
+    app: amy-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: amy-app
+  strategy:
+    rollingUpdate:
+      maxSurge: 10%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: amy-app
+    spec:
+      containers:
+      - name: amy-app
+        image: gcr.io/lbg-210322/amy-image:v61
+        ports:
+        - containerPort: 5000
