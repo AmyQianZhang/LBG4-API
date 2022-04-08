@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: amy-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: amy-app
+  ports:
+  - protocol: TCP
+    port: 5000        # Defines the Service's port within the cluster
+    targetPort: 5000
