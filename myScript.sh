@@ -18,16 +18,9 @@ docker image prune -f
 
 docker push gcr.io/lbg-210322/${image}:v${BUILD_ID}
 
-pwd
+sed -e "s,{{VERSION}},${BUILD_ID},g" kubernetes/application.yml | kubectl apply -f -
 
-ls
-
-sed -e "s,{{VERSION}},${BUILD_ID},g" kubernetes/application.yml
-
-echo '${BUILD_ID}'
-
-echo "${BUILD_ID}"
-
-kubectl apply -f kubernetes/application.yml
-
-kubectl apply -f kubernetes/service.yml
+if ! kubectl get services amy-app-service > /dev/null
+then
+	kubectl apply -f service.yml
+fi
