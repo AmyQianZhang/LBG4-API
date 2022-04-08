@@ -20,9 +20,11 @@ docker push gcr.io/lbg-210322/${image}:v${BUILD_ID}
 
 docker tag gcr.io/lbg-210322/${image}:v${BUILD_ID} gcr.io/lbg-210322/${image}:latest
 
+kubectl apply -f kubernetes/application.yml
+
 #sed -e "s,{{VERSION}},${BUILD_ID},g" kubernetes/application.yml | kubectl apply -f -
 
 if ! kubectl get services amy-app-service > /dev/null
 then
-	kubectl apply -f service.yml
+	kubectl apply -f kubernetes/service.yml
 fi
