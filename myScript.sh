@@ -18,4 +18,5 @@ docker image prune -f
 
 docker push gcr.io/lbg-210322/${image}:v${BUILD_ID}
 
-kubectl apply -f kubernetes/application.yml kubernetes/service.yml
+kubectl apply -f kubernetes/application.yml
+kubectl apply -f kubernetes/service.yml
